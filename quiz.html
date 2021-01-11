@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo Quiz">
+    <meta name="author" content="Uyen DLT">
+    <link rel="stylesheet" href="headerandfooter.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <title>Demo Quiz</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .grid-container {
+            margin-left: 10px;
+            margin-right: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 40px;
+            background-color: white;
+            padding: 50px;
+            border: #666;
+            /* background-image: linear-gradient(to bottom right,white ,#26D8D8); */
+        }
+        
+        .grid-container>div {
+            background-image: url(image/unit.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 120px 0;
+            font-size: 70px;
+            background-position: center;
+            border: 2px;
+            border-radius: 50px 50px;
+        }
+        
+        .logo {
+            width: 40%;
+            float: left;
+            /* background-color: blueviolet; */
+            height: 100px;
+            margin-left: 50px;
+        }
+        
+        .account {
+            text-align: right;
+            width: 20%;
+            float: left;
+            /* background-color: aquamarine; */
+            margin-left: 10%;
+        }
+        
+        .main {
+            float: left;
+            /* background-color: #666; */
+            position: relative;
+            width: 100%;
+        }
+        
+        .quizMain {
+            width: 90%;
+            border: 2px solid #262261;
+            border-radius: 10px;
+            height: 700px;
+            margin: 5%;
+            background-color: bisque;
+            float: left;
+        }
+        
+        .quizMain::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .quizQuesition {
+            float: left;
+            /* background-color: #666; */
+            position: relative;
+            width: 55%;
+            height: 80%;
+            margin-left: 5%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            /* width question: 55+5=60 */
+        }
+        
+        .quizQuesition>div {
+            margin-left: 10%;
+            margin-right: 20%;
+            position: absolute;
+            top: 10%;
+            width: 70%;
+            font-size: xx-large;
+        }
+        
+        .quizAnswer {
+            width: 40%;
+            position: relative;
+            font-size: 40px;
+            /* background-color: #FFDD17; */
+            float: left;
+            margin-top: 10%;
+        }
+        
+        img.imgQuiz {
+            /* background-color: aqua; */
+            position: relative;
+            width: 100%;
+            height: 80%;
+        }
+        
+        input[type=radio] {
+            border: 3px;
+            width: 30px;
+            height: 3em;
+            margin-left: 0;
+        }
+        
+        input[type=submit] {
+            border: 3px;
+            width: 40%;
+            height: 60px;
+            font-size: 30px;
+            border-radius: 30px 30px;
+            border: 3px solid #262261;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+        }
+        
+        th {
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo" style="width: fit-content;">
+            <a href="#"><img src="image/logo.jpg" width="300px" height="100px"></a>
+        </div>
+        <div class="headermajor"> </div>
+        <div class="account">
+            <div class="account_logo"></div>
+            <div class="account_name">
+                <a href="#">Account Name</a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <!-- <img src="image/banner.png" width="750px" height="350px"> -->
+        <div class="banner-text">
+            <h1>Unit</h1>
+        </div>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Dashboard</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Subject</a>
+                <div class="dropdown-content">
+                    <a href="#">Math</a>
+                    <a href="#">Science</a>
+                </div>
+            </li>
+            <li><a href="#news">QUIZ</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="quizMain">
+            <div class="quizQuesition">
+                <img class="imgQuiz" src="image/quiz.png">
+                <div>
+                    <p> 1+1=????</p>
+                </div>
+            </div>
+            <div class="quizAnswer">
+                <form action="/action_page.php" style="box-sizing: border-box;">
+                    <table style="margin: 5%;width: 100%;">
+                        <caption>Chọn câu trả lời đúng</caption>
+                        <tr>
+                            <th style="width: 5%;"><input type="radio" id="answer1" name="answer" value="male"></th>
+                            <th><label for="male">3</label></th>
+                            <th style="width: 5%;"> <input type="radio" id="answer2" name="answer" value="female"></th>
+                            <th><label for="female">4</label><br></th>
+                        </tr>
+                        <tr>
+                            <th><input type="radio" id="answer3" name="answer" value="other"></th>
+                            <th><label for="other">1</label></th>
+                            <th>
+                                <input type="radio" id="answer4" name="answer" value="ahehe">
+                            </th>
+                            <th> <label for="other">2</label><br>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_column_contact">
+            <p>
+                Liên hệ hợp tác:
+                <br>Nguyễn Như Anh
+                <br>Tel.0912 494 707 - (04) 7307 7979 (#62120)
+                <br>Email: anhnguyenthinhu@admicro.vn
+            </p>
+        </div>
+        <div class="footer_column_logo">
+            <img src="image/footer_logo.jpg" width="500px" height="200px">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
