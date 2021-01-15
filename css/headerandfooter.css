@@ -89,6 +89,11 @@ li a,
 
 /* footer */
 
+hr.new1 {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 .footer::after {
     content: "";
     display: table;
@@ -100,9 +105,9 @@ li a,
 }
 
 .footer_column_contact {
+    /* background-color: aqua; */
     float: left;
     width: 50%;
-    padding: 50px;
     height: 300px;
     padding-left: 10%;
     font-size: 20px;
