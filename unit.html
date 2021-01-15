@@ -49,52 +49,20 @@
             margin-left: 50px;
         }
     </style>
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            $('#header').load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
 </head>
 
 <body>
-    <div class="header">
-        <div class="logo" style="width: fit-content;">
-            <a href="#"><img src="image/logo.jpg" width="300px" height="100px"></a>
-        </div>
-        <div class="headermajor"> </div>
-        <div class="account">
-            <div class="account_logo"></div>
-            <div class="account_name">
-                <ul>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn_header">Account Name</a>
-                        <div class="dropdown-content">
-                            <a href="profile.html">Profile</a>
-                            <a href="changepassword.html">Change password</a>
-                            <a href="grade.html">Grade</a>
-                            <a href="login.html">Log out</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <div id="header"></div>
 
-
-    <div class="banner">
-        <!-- <img src="image/banner.png" width="750px" height="350px"> -->
-        <div class="banner-text">
-            <h1>Unit</h1>
-        </div>
-    </div>
-    <div class="navbar">
-        <ul>
-            <li><a href="#home">Homepage</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Subject</a>
-                <div class="dropdown-content">
-                    <a href="#">Math</a>
-                    <a href="#">Science</a>
-                </div>
-            </li>
-            <li><a href="#news">Unit</a></li>
-        </ul>
-    </div>
     <div class="main">
         <div class="grid-container">
             <div><a href="#">1</a></div>
@@ -107,21 +75,9 @@
             <div><a href="#">8</a></div>
         </div>
     </div>
-    <div class="footer">
-        <div class="footer_column_contact">
-            <p>
-                Liên hệ hợp tác:
-                <br>Nguyễn Như Anh
-                <br>Tel.0912 494 707 - (04) 7307 7979 (#62120)
-                <br>Email: anhnguyenthinhu@admicro.vn
-            </p>
-        </div>
-        <div class="footer_column_logo">
-            <img src="image/footer_logo.jpg" width="500px" height="200px">
-        </div>
 
-    </div>
-
+    <div id="footer"></div>
 </body>
+
 
 </html>
