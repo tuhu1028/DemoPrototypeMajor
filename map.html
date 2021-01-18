@@ -16,37 +16,10 @@
             box-sizing: border-box;
         }
         
-        .grid-container {
-            margin-left: 10px;
-            margin-right: 10px;
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 40px;
-            background-color: white;
-            padding: 50px;
-            border: #666;
-            /* background-image: linear-gradient(to bottom right,white ,#26D8D8); */
-        }
-        
-        .grid-container>div {
-            background-image: url(image/unit.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 120px 0;
-            font-size: 70px;
-            background-position: center;
-            border: 2px;
-            border-radius: 50px 50px;
-        }
-        
-        .logo {
-            width: 40%;
-            float: left;
-            /* background-color: blueviolet; */
-            height: 100px;
-            margin-left: 50px;
+        .map::after {
+            content: "";
+            display: table;
+            clear: both;
         }
         
         .map {
@@ -61,12 +34,12 @@
         
         .lession {
             /* background-color: aqua; */
-            /* padding-top: 25%; */
+            padding-top: 25%;
             width: 40%;
             float: left;
             padding-left: 24%;
             padding-top: 22%;
-            position: relative;
+            /* position: static; */
         }
         
         #lession {
@@ -111,7 +84,7 @@
         }
         
         .progress {
-            /* backgro  und-color: blueviolet; */
+            /* background-color: blueviolet; */
             width: 50%;
             float: left;
             padding-left: 35%;
@@ -174,25 +147,42 @@
         .show {
             display: block;
         }
+        
+        li a,
+        .dropbtn_lession {
+            position: relative;
+            display: inline-block;
+            color: #262261;
+            /* text-align: center; */
+            padding: 14px 16px;
+            text-decoration: none;
+        }
     </style>
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            $('#header').load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
 </head>
 
 <body>
 
     <div class="main">
         <div class="map">
-            <div class="lession" onclick="myFunction()">
-                <a href="#">
-                    <div class="overlay">Lession
-                    </div>
-                    <img id="lession" src="image/ic_lesson.png" width="1" height="1">
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </a>
-
+            <div class="lession">
+                <ul>
+                    <li class="dropdown">
+                        <img src="image/ic_lesson.png">
+                        <a href="#" class="dropbtn_lession">Lession</a>
+                        <div class="dropdown-content">
+                            <a href="#">Lession 1</a>
+                            <a href="#">Lession 2</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="quiz">
                 <a href="#">
@@ -215,43 +205,8 @@
             </div>
         </div>
     </div>
+    <div id="footer"></div>
 
-
-    <div class="footer">
-        <div class="footer_column_contact">
-            <p>
-                Liên hệ hợp tác:
-                <br>Nguyễn Như Anh
-                <br>Tel.0912 494 707 - (04) 7307 7979 (#62120)
-                <br>Email: anhnguyenthinhu@admicro.vn
-            </p>
-        </div>
-        <div class="footer_column_logo">
-            <img src="image/footer_logo.jpg" width="500px" height="200px">
-        </div>
-
-    </div>
-    <script>
-        /* When the user clicks on the button, 
-                                                                        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
 </body>
 
 </html>
