@@ -17,15 +17,22 @@
         }
         
         .grid-container {
+            /* transform: translate(10%, 10%); */
+            height: max-content;
             margin-left: 10px;
             margin-right: 10px;
             display: grid;
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: 400px 400px 300px;
+            grid-template-rows: 300px 300px 300px 300px;
             grid-gap: 40px;
-            background-color: white;
+            /* background-color: aquamarine; */
             padding: 50px;
             border: #666;
             /* background-image: linear-gradient(to bottom right,white ,#26D8D8); */
+        }
+        
+        main {
+            text-align: center;
         }
         
         .grid-container>div {
@@ -34,11 +41,24 @@
             background-repeat: no-repeat;
             background-color: rgba(255, 255, 255, 0.8);
             text-align: center;
-            padding: 120px 0;
+            padding: 100px 0;
             font-size: 70px;
             background-position: center;
             border: 2px;
             border-radius: 50px 50px;
+        }
+        
+        a {
+            text-decoration: solid;
+        }
+        
+        a:hover {
+            color: blue;
+            text-decoration: none;
+        }
+        
+        selector:hover {
+            color: blueviolet;
         }
         
         .logo {
@@ -67,12 +87,16 @@
         <div class="grid-container">
             <div><a href="#">1</a></div>
             <div><a href="#">2</a></div>
+            <div><a href="#">Review 1</a></div>
             <div><a href="#">3</a></div>
             <div><a href="#">4</a></div>
+            <div><a href="#">Review 2</a></div>
             <div><a href="#">5</a></div>
             <div><a href="#">6</a></div>
+            <div><a href="#">Review 3</a></div>
             <div><a href="#">7</a></div>
             <div><a href="#">8</a></div>
+            <div><a href="#">Review 4</a></div>
         </div>
     </div>
 
